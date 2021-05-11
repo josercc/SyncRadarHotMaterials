@@ -59,7 +59,7 @@ struct SyncRadarHotMaterials: ParsableCommand {
                 SyncRadarHotMaterials.exit()
             }
             do {
-                try jsonText.write(toFile: "\(configation.get(key: "local_path"))/\(envPreix)_SyncRadarHotMaterials.json", atomically: true, encoding: .utf8)
+                try jsonText.write(toFile: "\(pwd)/\(configation.get(key: "local_path"))/\(envPreix)_SyncRadarHotMaterials.json", atomically: true, encoding: .utf8)
             } catch(let e) {
                 logging.error("\(e.localizedDescription)")
             }
